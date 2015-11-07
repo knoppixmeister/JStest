@@ -39,9 +39,10 @@
 			<a data-toggle="modal" data-target="#itemModal" class="btn btn-success">Add item</a>
 
 			<ul id="list" class="list-group" style="padding-top: 10px;">
-				<li ng-repeat="item in items" class="list_item list-group-item">
+				<li ng-repeat="item in items" class="list_item list-group-item" data-id="{{item.id}}" data-parent_id="0">
 					<span class="glyphicon glyphicon-plus" ng-click="showHideChilds()"></span> 
-					{{item.text}} <a class="add_child_btn btn btn-info btn-xs" ng-click="addChildItem()">Add child</a>  
+					{{item.text}} 
+					<a class="add_child_btn btn btn-info btn-xs" ng-click="addChildItem()">Add child</a> 
 					<a class="edit_item_btn btn btn-xs btn-primary" ng-click="editItem()">Edit</a> 
 					<a class="delete_item_btn btn btn-xs btn-danger" ng-click="deleteItem()">Delete</a>
 				</li>

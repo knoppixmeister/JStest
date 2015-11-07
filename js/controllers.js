@@ -10,9 +10,23 @@ jstestControllers.controller('ItemsListCtrl', ['$scope', '$http',
 
 		$scope.items = 	[
 		               	 	{
+		               	 		'id': 1,
 		               	 		'text': 'dsdfsdfsdf',
+		               	 		'childs': [
+		               	 		     {
+		               	 		    	 'id': 2,
+		               	 		    	 'text': 'sdfsdfsdf',
+		               	 		    	 'childs': [
+               	 		    	            {
+               	 		    	            	'id': 3,
+               	 		    	            	'text': 'ytuytuytu'
+               	 		    	            },
+		               	 		    	 ],
+		               	 		     },
+		               	 		]
 		               	 	},
 		               	 	{
+		               	 		'id': 4,
 		               	 		'text': 'aaaaaaaaaaa',
 		               	 	}
 		                ];
