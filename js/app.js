@@ -1,4 +1,4 @@
 var jstestApp = angular.module('jstestApp', [
-	'phonecatControllers'
+	'ngRoute',
+	'jstestControllers'
 ]);
-

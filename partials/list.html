@@ -1,0 +1,53 @@
+<div class="modal" id="itemModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">&nbsp;</h4>
+			</div>
+			<div class="modal-body">
+
+				Parent item<br/>
+				<select class="form-control" id="item_parent">
+					<option value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+
+				<br/>
+
+				<div>
+					<input class="form-control" type="text" placeholder="Item title" id="item_title_value"/>
+					<div class="error_msg" style="color: red; display: none;"></div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" ng-click="saveItem()">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-6">
+
+			<br/>
+			<a data-toggle="modal" data-target="#itemModal" class="btn btn-success">Add item</a>
+
+			<ul id="list" class="list-group" style="padding-top: 10px;">
+				<li ng-repeat="item in items" class="list_item list-group-item">
+					<span class="glyphicon glyphicon-plus" ng-click="showHideChilds()"></span> 
+					{{item.text}} <a class="add_child_btn btn btn-info btn-xs" ng-click="addChildItem()">Add child</a>  
+					<a class="edit_item_btn btn btn-xs btn-primary" ng-click="editItem()">Edit</a> 
+					<a class="delete_item_btn btn btn-xs btn-danger" ng-click="deleteItem()">Delete</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+</div>
